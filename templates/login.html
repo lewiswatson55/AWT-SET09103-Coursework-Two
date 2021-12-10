@@ -1,0 +1,32 @@
+{% extends "master.html" %}
+
+{% block content %}
+
+    <script src="{{ url_for('static', filename='/js/authentication.js') }}"></script>
+
+{#    <form method="post">#}
+    <div class="field">
+      <p class="control has-icons-left has-icons-right">
+        <input class="input" type="email" name="userEmail" id="emailid" placeholder="Email">
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+      </p>
+    </div>
+    <div class="field">
+      <p class="control has-icons-left">
+        <input class="input" type="password" name="userPass" id="passwordid" placeholder="Password">
+        <span class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+      </p>
+    </div>
+    <div class="field">
+      <p class="control">
+        <button onclick="login()" class="button has-background-grey-dark has-text-grey-lighter">
+          Login
+        </button>
+      </p>
+    </div>
+{#    </form>#}
+{% endblock %}

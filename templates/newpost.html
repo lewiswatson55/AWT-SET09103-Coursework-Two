@@ -1,0 +1,23 @@
+{% extends "master-loggedin.html" %}
+
+{% block content %}
+
+<!-- form with fields heading, caption, image upload -->
+    <form action="/newpost" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="text" class="input form-control" id="heading" name="heading" placeholder="Heading">
+    </div>
+    <div class="form-group">
+        <textarea type="text"  class="input form-control textarea" id="caption" name="caption" placeholder="Caption here..."></textarea>
+    </div>
+    <div class="form-group">
+    <br>
+        <input type="file" class="button form-control-file" id="image" name="image">
+        <p>File must be .png or .jpeg</p>
+    </div>
+    <br>
+    <button type="submit" class="button btn btn-primary has-background-grey has-text-white">Submit</button>
+    </form>
+
+{% endblock %}
+<html>

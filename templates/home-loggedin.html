@@ -1,9 +1,9 @@
-{% extends "master.html" %}
+{% extends "master-loggedin.html" %}
 
 {% block content %}
 
 {%  if posts %}
-        <h1 class="has-text-grey-dark" style="text-decoration: underline saddlebrown;"> All Posts </h1>
+        <h1 class="has-text-grey-dark" style="text-decoration: underline saddlebrown;"> Recent Posts... </h1>
                 <br>
         <ul>
             {% for post in posts %}
@@ -27,7 +27,7 @@
                       <div class="media">
                         <div class="media-content">
                           <p class="title is-4">{{ post.heading }}</p>
-                          <p class="subtitle is-6">AuthorID: {{ post.authorid }}</p>
+                          <p class="subtitle is-6">AuthorID: {{  post.authorid }}</p>
                         </div>
                       </div>
 

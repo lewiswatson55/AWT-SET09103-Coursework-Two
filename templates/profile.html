@@ -1,10 +1,14 @@
-{% extends "master.html" %}
+{% extends "master-loggedin.html" %}
 
 {% block content %}
 
-{%  if posts %}
-        <h1 class="has-text-grey-dark" style="text-decoration: underline saddlebrown;"> All Posts </h1>
-                <br>
+
+
+    <div class="columns">
+      <div class="column">
+            {%  if posts %}
+        <h1 class="has-text-grey-dark" style="text-decoration: underline saddlebrown;"> My Posts </h1>
+        <br>
         <ul>
             {% for post in posts %}
                 <div class="container">
@@ -42,11 +46,28 @@
                 </div>
             {% endfor %}
         </ul>
-    {%  else %}
-        <h1 class="has-text-grey-dark" style="text-decoration: underline saddlebrown;"> No Posts </h1>
+        {% else %}
+                <h1 class="has-text-grey-dark" style="text-decoration: saddlebrown;">no posts... <a href="/newpost"> <br>Make one here </a> </h1>
     {% endif %}
 
+      </div>
+      <div class="column">
+        <div class="card">
+        <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4">{{data.email}}</p>
+            <p class="subtitle is-6">@{{data.username}}</p>
+          </div>
+        </div>
 
+    <div class="content">
+      Welcome to BeanBefore, remember to log and track when you visit a new cafe or pick up a new type of bean!.
+      <a href="#"></a> <a href="#">#beanbefore</a>
+      <br>
+    </div>
+  </div>
+</div></div>
 
 
 {% endblock %}
